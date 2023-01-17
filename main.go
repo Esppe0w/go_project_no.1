@@ -3,11 +3,15 @@ package main
 import (
 	"fmt"
 
-	banking "github.com/Esppe0w/goproject_1/bankaccount"
+	"github.com/Esppe0w/goproject_1/dict"
 )
 
 func main() {
-	account := banking.Account{Owner: "희재", Balance: 1000}
+	dictionary := dict.Dictionary{"first": "Frist word"}
+	difinition, err := dictionary.Search("second")
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(difinition)
 
-	fmt.Println(account)
 }
